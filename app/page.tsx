@@ -1,13 +1,23 @@
 "use client";
 
 import { Clock2, Link, Milestone, PartyPopper, Smile } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
 
 import ContentSection from "./components/content-section";
+import { default as NavLink } from "next/link";
 
 export default function Home() {
 	return (
 		<>
+			<div className="navbar bg-secondary text-white">
+				<div className="max-w-screen-xl mx-auto flex w-full items-center justify-center px-8">
+					<div className="flex-1">
+						<a className="btn btn-ghost text-xl">SideHustler</a>
+					</div>
+					<div className="flex-none">
+						<NavLink className="font-semibold text-white" href={"#"}>Login</NavLink>
+					</div>
+				</div>
+			</div>
 			<section className="hero bg-white min-h-[75vh] text-black">
 				<div className="hero-content text-center">
 					<div className="max-w-screen-2xl">
@@ -115,37 +125,97 @@ export default function Home() {
 								</p>
 							</div>
 							<div className="flex flex-col gap-4 text-center justify-center items-center">
-								<PartyPopper  className="w-10 h-10 text-[#6164fa]" />
+								<PartyPopper className="w-10 h-10 text-[#6164fa]" />
 								<h3 className="font-black text-3xl text-secondary">
 									Get Back Your Life
 								</h3>
 								<p className="text-lg">
-									Projects managed, time regained, stress lifted, finally regain your life and enjoy yourself.
+									Projects managed, time regained, stress lifted, finally regain
+									your life and enjoy yourself.
 								</p>
-							</div>
-						</div>
-					</section>
-					<section>
-						<div className="w-full h-[300px] absolute -rotate-1 bg-[#6164FA] rounded-lg"></div>
-						<div className="w-full h-[300px]  rotate-1 bg-[#1B2733] rounded-lg p-16 flex justify-center items-center">
-							<div className="px-8">
-								<h3 className="text-white font-bold text-5xl pb-4">
-									Simplify your process!
-								</h3>
-								<p className="font-medium text-xl text-[#b6b5bf]">
-									Take the leap and regain your life, manage projects with ease
-									and gain back valuable time.
-								</p>
-							</div>
-							<div className="px-8">
-								<button className="btn btn-accent btn-wide btn-lg text-secondary">
-									Subscribe Now
-								</button>
 							</div>
 						</div>
 					</section>
 				</div>
 			</section>
+			<section className="bg-secondary py-32">
+				<div className="max-w-screen-xl mx-auto">
+					<div className="text-center max-w-screen-md mx-auto pb-32">
+						<h6 className="uppercase font-bold text-accent text-xl pb-4">
+							What We Offer
+						</h6>
+						<h3 className="text-6xl font-black text-white">
+							A Taste Of What You Can Do
+						</h3>
+					</div>
+					<div className="flex flex-col gap-16">
+						<div className="w-full bg-white  h-[600px] grid grid-cols-2 rounded-xl">
+							<div className="w-full text-secondary flex flex-col justify-center pl-8">
+								<h4 className="font-semibold uppercase tracking-widest text-[#6164FA]">
+									Revise Designs
+								</h4>
+								<h3 className="text-6xl font-bold py-4">Web Design Edits</h3>
+								<p className="text-lg font-medium">
+									Allow clients to make realtime revisions to any designs you
+									create during the project phase
+								</p>
+								<button className="mt-8 btn btn-secondary btn-wide btn-lg text-white">
+									Subscribe Now
+								</button>
+							</div>
+							<div className="bg-[#6164FA] rounded-r-xl flex justify-center items-center text-white font-black text-2xl">
+								Preview Image/Video
+							</div>
+						</div>
+						<div className="w-full bg-white  h-[600px] grid grid-cols-2 rounded-xl">
+							<div className="w-full text-secondary flex flex-col justify-center pl-8">
+								<h4 className="font-semibold uppercase tracking-widest text-[#6164FA]">
+									Revise Music
+								</h4>
+								<h3 className="text-6xl font-bold py-4">Track Edits</h3>
+								<p className="text-lg font-medium">
+									Allow clients to grab specific timestamps and make
+									suggestions/revisions to parts of a song.
+								</p>
+								<button className="mt-8 btn btn-secondary btn-wide btn-lg text-white">
+									Subscribe Now
+								</button>
+							</div>
+							<div className="bg-[#6164FA] rounded-r-xl flex justify-center items-center text-white font-black text-2xl">
+								Preview Image/Video
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section className="bg-secondary pb-32">
+				<div className="max-w-screen-xl mx-auto relative py-32 ">
+					<div className="w-full h-[300px] absolute -rotate-1 bg-[#6164FA] rounded-lg"></div>
+					<div className="w-full h-[300px]  rotate-1 bg-[#1B2733] rounded-lg p-16 flex justify-center items-center">
+						<div className="px-8">
+							<h3 className="text-white font-bold text-5xl pb-4">
+								Simplify your process!
+							</h3>
+							<p className="font-medium text-xl text-[#b6b5bf]">
+								Take the leap and regain your life, manage projects with ease
+								and gain back valuable time.
+							</p>
+						</div>
+						<div className="px-8">
+							<button className="btn btn-accent btn-wide btn-lg text-secondary">
+								Subscribe Now
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<footer className="footer footer-center bg-secondary text-white p-4">
+				<aside>
+					<p className="font-semibold">
+						Copyright © {new Date().getFullYear()} - All right reserved by Me
+					</p>
+				</aside>
+			</footer>
 		</>
 	);
 }
